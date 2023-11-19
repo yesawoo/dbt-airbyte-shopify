@@ -1,0 +1,317 @@
+version: 2
+
+sources:
+  - name: shopify
+    description: Shopify tables created by Airbyte.
+    schema: "{{ var('schema', 'airbyte') }}"
+    database: "{% if target.type != 'spark' %}{{ var('database', target.database) }}{% endif %}"
+    
+    tables:
+      - name: abandoned_checkouts
+        description: Raw abandoned_checkouts data.
+        columns:
+          - name: id
+            description: Primary key for abandoned_checkouts.
+            tests:
+              - unique
+              - not_null
+      - name: balance_transactions
+        description: Raw balance_transactions data.
+        columns:
+          - name: id
+            description: Primary key for balance_transactions.
+            tests:
+              - unique
+              - not_null
+      - name: collections
+        description: Raw collections data.
+        columns:
+          - name: id
+            description: Primary key for collections.
+            tests:
+              - unique
+              - not_null
+      - name: collects
+        description: Raw collects data.
+        columns:
+          - name: id
+            description: Primary key for collects.
+            tests:
+              - unique
+              - not_null
+      - name: countries
+        description: Raw countries data.
+        columns:
+          - name: id
+            description: Primary key for countries.
+            tests:
+              - unique
+              - not_null
+      - name: custom_collections
+        description: Raw custom_collections data.
+        columns:
+          - name: id
+            description: Primary key for custom_collections.
+            tests:
+              - unique
+              - not_null
+      - name: customer_address
+        description: Raw customer_address data.
+        columns:
+          - name: id
+            description: Primary key for customer_address.
+            tests:
+              - unique
+              - not_null
+      - name: customer_saved_search
+        description: Raw customer_saved_search data.
+        columns:
+          - name: id
+            description: Primary key for customer_saved_search.
+            tests:
+              - unique
+              - not_null
+      - name: customers
+        description: Raw customers data.
+        columns:
+          - name: id
+            description: Primary key for customers.
+            tests:
+              - unique
+              - not_null
+      - name: discount_codes
+        description: Raw discount_codes data.
+        columns:
+          - name: id
+            description: Primary key for discount_codes.
+            tests:
+              - unique
+              - not_null
+      - name: disputes
+        description: Raw disputes data.
+        columns:
+          - name: id
+            description: Primary key for disputes.
+            tests:
+              - unique
+              - not_null
+      - name: draft_orders
+        description: Raw draft_orders data.
+        columns:
+          - name: id
+            description: Primary key for draft_orders.
+            tests:
+              - unique
+              - not_null
+      - name: fulfillments
+        description: Raw fulfillments data.
+        columns:
+          - name: id
+            description: Primary key for fulfillments.
+            tests:
+              - unique
+              - not_null
+      - name: locations
+        description: Raw locations data.
+        columns:
+          - name: id
+            description: Primary key for locations.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_collections
+        description: Raw metafield_collections data.
+        columns:
+          - name: id
+            description: Primary key for metafield_collections.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_customers
+        description: Raw metafield_customers data.
+        columns:
+          - name: id
+            description: Primary key for metafield_customers.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_draft_orders
+        description: Raw metafield_draft_orders data.
+        columns:
+          - name: id
+            description: Primary key for metafield_draft_orders.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_locations
+        description: Raw metafield_locations data.
+        columns:
+          - name: id
+            description: Primary key for metafield_locations.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_orders
+        description: Raw metafield_orders data.
+        columns:
+          - name: id
+            description: Primary key for metafield_orders.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_pages
+        description: Raw metafield_pages data.
+        columns:
+          - name: id
+            description: Primary key for metafield_pages.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_product_images
+        description: Raw metafield_product_images data.
+        columns:
+          - name: id
+            description: Primary key for metafield_product_images.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_product_variants
+        description: Raw metafield_product_variants data.
+        columns:
+          - name: id
+            description: Primary key for metafield_product_variants.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_products
+        description: Raw metafield_products data.
+        columns:
+          - name: id
+            description: Primary key for metafield_products.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_shops
+        description: Raw metafield_shops data.
+        columns:
+          - name: id
+            description: Primary key for metafield_shops.
+            tests:
+              - unique
+              - not_null
+      - name: metafield_smart_collections
+        description: Raw metafield_smart_collections data.
+        columns:
+          - name: id
+            description: Primary key for metafield_smart_collections.
+            tests:
+              - unique
+              - not_null
+      - name: order_refunds
+        description: Raw order_refunds data.
+        columns:
+          - name: id
+            description: Primary key for order_refunds.
+            tests:
+              - unique
+              - not_null
+      - name: order_risks
+        description: Raw order_risks data.
+        columns:
+          - name: id
+            description: Primary key for order_risks.
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        description: Raw orders data.
+        columns:
+          - name: id
+            description: Primary key for orders.
+            tests:
+              - unique              
+              - not_null
+      - name: pages
+        description: Raw pages data.
+        columns:
+          - name: id
+            description: Primary key for pages.
+            tests:
+              - unique
+              - not_null
+      - name: price_rules
+        description: Raw price_rules data.
+        columns:
+          - name: id
+            description: Primary key for price_rules.
+            tests:
+              - unique
+              - not_null
+      - name: product_images
+        description: Raw product_images data.
+        columns:
+          - name: id
+            description: Primary key for product_images.
+            tests:
+              - unique
+              - not_null
+      - name: product_variants
+        description: Raw product_variants data.
+        columns:
+          - name: id
+            description: Primary key for product_variants.
+            tests:
+              - unique
+              - not_null
+      - name: products
+        description: Raw products data.
+        columns:
+          - name: id
+            description: Primary key for products.
+            tests:
+              - unique
+              - not_null
+      - name: products_graph_ql
+        description: Raw products_graph_ql data.
+        columns:
+          - name: id
+            description: Primary key for products_graph_ql.
+            tests:
+              - unique
+              - not_null
+      - name: shop
+        description: Raw shop data.
+        columns:
+          - name: id
+            description: Primary key for shop.
+            tests:
+              - unique
+              - not_null
+      - name: smart_collections
+        description: Raw smart_collections data.
+        columns:
+          - name: id
+            description: Primary key for smart_collections.
+            tests:
+              - unique
+              - not_null
+      - name: tender_transactions
+        description: Raw tender_transactions data.
+        columns:
+          - name: id
+            description: Primary key for tender_transactions.
+            tests:
+              - unique
+              - not_null
+      - name: transactions
+        description: Raw transactions data.
+        columns:
+          - name: id
+            description: Primary key for transactions.
+            tests:
+              - unique
+              - not_null
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
