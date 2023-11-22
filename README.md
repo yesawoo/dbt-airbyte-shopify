@@ -37,3 +37,7 @@ vars:
     shopify_database: your_database_name
     shopify_schema: your_schema_name
 ```
+
+## Notes
+
+This package has been tested in Google BigQuery only.
