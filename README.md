@@ -23,7 +23,7 @@ Include the following in your packages.yml file:
 ```
 packages:
   - git: "https://github.com/creativeautomation/dbt-airbyte-shopify.git"  
-    revision: v0.1.0
+    revision: 0.1.1
 ```
 
 Run `dbt deps` to install the package.
