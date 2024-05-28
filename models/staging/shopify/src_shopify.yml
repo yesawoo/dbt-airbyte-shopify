@@ -3,8 +3,8 @@ version: 2
 sources:
   - name: shopify
     description: Shopify tables created by Airbyte.
-    schema: "{{ var('schema', 'airbyte') }}"
-    database: "{% if target.type != 'spark' %}{{ var('database', target.database) }}{% endif %}"
+    schema: "{{ var('shopify_schema', 'airbyte') }}"
+    database: "{% if target.type != 'spark' %}{{ var('shopify_database', target.database) }}{% endif %}"
     
     tables:
       - name: abandoned_checkouts
